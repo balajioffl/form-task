@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans+Narrow:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register form !</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <form>
+
+            <h2>Registration Form</h2>
+
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter your name" id="name"></input>
+            <div class="alert" id="name-error"></div>
+
+            <label for="age">Age</label>
+            <input type="number" placeholder="Enter your Age" id="age"></input>
+            <div class="alert" id="age-error"></div>
+
+            <label for="email">Enter your E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email"></input>
+            <div class="alert" id="email-error"></div>
+
+            <label for="invite-email">Invite E-mail</label>
+            <input type="email" id="invite-email" name="invite-email" placeholder="Add email">
+            <div class="alert" id="invite-email-error"></div>
+
+            <div id="additional-email"></div>
+
+            <div class="emailbtn">
+                <button id="add">Add email</button>
+            </div>
+
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" placeholder="Enter your password"></input>
+            <div class="alert" id="pwd-error"></div>
+
+            <label for="re-pwd">Confirm Password</label>
+            <input type="password" id="re-pwd" placeholder="re-enter your password"></input>
+            <div class="alert" id="re-pwd-error"></div>
+
+            <label for="gender">Gender</label>
+            <div class="gender" id="gender">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="others" name="gender" value="Others">
+                <label for="others">others</label>
+            </div>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday">
+            <div class="alert" id="dob-error"></div>
+
+            <label>Phone number</label>
+            <input type="number" name="phone" id="phone"/>
+            <div class="alert" id="phone-error"></div>
+
+            <div class="last" id="last">
+                <button id="submit">Submit</button>
+                <a href="list.html">Go to List Page</a>
+            </div>
+        </form>
+    </div>
+    <script src="validate.js"></script>
+    <script src="store.js"></script>
+</body>
+
+</html>
+
