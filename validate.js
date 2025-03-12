@@ -42,8 +42,11 @@ function addEmail(event) {
   });
   event.preventDefault();
 }
-invite_email.value = "";
-invite.addEventListener("click", addEmail);
+
+invite.addEventListener("click", function (event) {
+  addEmail(event);
+  invite_email.value = "";
+});
 
 // validation the input field
 
@@ -72,13 +75,6 @@ function validate() {
     document.getElementById("email").style.border = "2px solid red";
   }
 
-  let invite_email = document.getElementById("invite-email");
-  if (invite_email.value.trim() === "") {
-    document.getElementById("invite-email-error").textContent =
-      "Please enter valid email !";
-    document.getElementById("invite-email").style.border = "2px solid red";
-  }
-
   let passwd = document.getElementById("pwd");
   let confirmpwd = document.getElementById("re-pwd");
   if (passwd.value.trim() !== confirmpwd.value.trim()) {
@@ -97,13 +93,5 @@ function validate() {
     document.getElementById("dob-error").textContent =
       "Please enter valid Date of Birth !";
     document.getElementById("name").style.border = "2px solid red";
-  }
-
-  let phone = document.getElementById("phone");
-  let phone_pattern = /^[0-9]{10}?$/;
-  if (!phone_pattern.test(phone.value.trim())) {
-    document.getElementById("phone-error").textContent =
-      "Please enter valid phone number !";
-    document.getElementById("phone").style.border = "2px solid red";
   }
 }
